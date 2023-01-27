@@ -14,12 +14,17 @@
 
         new_combo {
             bindings = <&to 4>;
-            key-positions = <39 40>;
+            key-positions = <40 41>;
         };
 
         new_combo {
             bindings = <&to 3>;
             key-positions = <37 40>;
+        };
+
+        new_combo {
+            bindings = <&to 0>;
+            key-positions = <36 37>;
         };
     };
 
@@ -67,7 +72,7 @@
  &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR     &trans
  &trans    &trans  &trans    &trans    &trans     &trans  &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
  &trans    &trans  &trans    &trans    &trans     &trans  &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans     &trans     &trans     &trans           &trans
+                             &trans    &trans     &trans     &trans     &trans          &kp ESC
             >;
         };
 
