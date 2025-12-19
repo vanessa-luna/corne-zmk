@@ -11,6 +11,11 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        bt_layer {
+            bindings = <&to 5>;
+            key-positions = <36 37 38>;
+        };
     };
 
     keymap {
@@ -61,7 +66,7 @@
             >;
         };
 
-        combo_layer {
+        func {
             bindings = <
 &bt BT_CLR  &none         &none         &none         &none         &none         &kp F1  &kp F2   &kp F3   &kp F4   &kp K_STOP    &kp K_PLAY_PAUSE
 &none       &none         &none         &none         &none         &none         &kp F5  &kp F6   &kp F7   &kp F8   &kp K_PREV    &kp K_NEXT
@@ -78,12 +83,21 @@
                         &trans  &trans  &trans  &kp BACKSPACE    &trans           &kp KP_NUMBER_0
             >;
         };
+
+        bluetooth {
+            bindings = <
+&bt BT_CLR  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        combo {
+        num_pad {
             if-layers = <1 2>;
             then-layer = <3>;
         };
